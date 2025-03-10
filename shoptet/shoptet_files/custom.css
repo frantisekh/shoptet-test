@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --template-font: "Montserrat", sans-serif;
+    --template-headings-font: "Montserrat", sans-serif;
+}
+
+
+.extended-banner-link, .extended-banner-text, .extended-banner-title {
+    position: relative;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+@media (min-width: 992px) {
+    .next-to-carousel-banners {
+        margin-top: 0px;
+    }
+}
