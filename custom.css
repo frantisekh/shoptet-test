@@ -532,3 +532,61 @@ span.extended-banner-link {
 .banner-wrapper a:hover img {
     opacity: 1;
 }
+
+/*navbar*/
+
+.navigation-in ul li a b {
+    font-weight: 500;
+}
+
+.navigation-in ul li a,
+.menu-helper>span {
+    font-size: 14px;
+}
+
+/*footer*/
+#footer {
+    background-color: #000;
+    color: #fff;
+    padding-bottom: 50px;
+}
+
+#footer h4 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+#footer .custom-footer-container p,
+#footer a {
+    color: #fff;
+}
+
+.footer-bottom {
+    border-color: transparent;
+    font-size: 18px;
+    padding-top: 100px;
+}
+
+#footer ul {
+    padding-left: 0px;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+#footer ul li {
+    padding: 3px 0;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin: 87px 0 67px 0;
+}
+#signature a.image img {
+    height: auto;
+    width: unset;
+}
+.miranda-logo {
+    margin-left: 10px;
+    margin-right: 10px;
+}

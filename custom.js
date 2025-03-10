@@ -123,6 +123,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Zobrazíme pouze 4 produkty
+    var products = document.querySelectorAll('.products-block>div .p');
+    products.forEach(function(product, index) {
+        if (index >= 4) {
+            product.style.display = 'none';
+        }
+    });
+
     // Přidáme tlačítko za .shp-tabs-wrapper.homepage-tabs-wrapper
     var tabsWrapper = document.querySelector('.shp-tabs-wrapper.homepage-tabs-wrapper');
     if (tabsWrapper) {
@@ -130,11 +138,74 @@ document.addEventListener('DOMContentLoaded', function() {
         wrapperDiv.className = 'text-center show-more-container';
 
         var newButton = document.createElement('a');
-        newButton.href = 'https://706264.myshoptet.com/modni-doplnky/';
+        newButton.href = '#';
         newButton.className = 'btn btn-secondary';
         newButton.textContent = 'Zobrazit více produktů';
 
+        newButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            products.forEach(function(product) {
+                product.style.display = 'block';
+            });
+            newButton.style.display = 'none'; // Skryjeme tlačítko po kliknutí
+        });
+
         wrapperDiv.appendChild(newButton);
         tabsWrapper.parentNode.insertBefore(wrapperDiv, tabsWrapper.nextSibling);
+    }
+
+
+    // Přidáme logo s odkazem před .row.custom-footer.elements-2
+    var footerRow = document.querySelector('.row.custom-footer.elements-2');
+    if (footerRow) {
+        var link = document.createElement('a');
+        link.href = 'https://706264.myshoptet.com/';
+        link.className = 'footer-logo'; // Přidáme třídu footer-logo
+
+        var img = document.createElement('img');
+        img.src = 'https://cdn.myshoptet.com/usr/706264.myshoptet.com/user/logos/logo.png';
+        img.alt = 'Můj e-shop';
+        img.loading = 'eager';
+
+        link.appendChild(img);
+        footerRow.parentNode.insertBefore(link, footerRow);
+    }
+
+    // Změníme textaci a logo v patičce
+    var signature = document.getElementById('signature');
+    if (signature) {
+        // Vytvoříme nový odkaz pro text "Vytvořil Shoptet"
+        var textLink = document.createElement('a');
+        textLink.href = 'https://www.shoptet.cz/?utm_source=footer&utm_medium=link&utm_campaign=create_by_shoptet';
+        textLink.className = 'title';
+        textLink.target = '_blank';
+        textLink.textContent = 'Vytvořil Shoptet |';
+
+        // Vytvoříme nový odkaz s logem a textem "MirandaMedia Group, s.r.o."
+        var link = document.createElement('a');
+        link.href = 'https://www.mirandamedia.cz/';
+        link.className = 'image';
+        link.target = '_blank';
+
+        var img = document.createElement('img');
+        img.src = 'https://706264.myshoptet.com/user/documents/upload/8e9fdce4362bf880d782e6435ebb7be6.png';
+        img.width = 17;
+        img.height = 17;
+        img.alt = 'MirandaMedia Group, s.r.o.';
+        img.className = 'miranda-logo';
+        img.loading = 'eager';
+
+        link.appendChild(img);
+
+        // Přidáme text "MirandaMedia Group, s.r.o." do stejného odkazu
+        var companyText = document.createTextNode(' MirandaMedia Group, s.r.o.');
+        link.appendChild(companyText);
+
+        // Vyčistíme původní obsah a přidáme nové prvky
+        signature.innerHTML = '';
+        signature.style.display = 'inline-block';
+        signature.style.visibility = 'visible';
+        signature.appendChild(textLink);
+        signature.appendChild(link);
     }
 });
