@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --template-font: "Montserrat", sans-serif;
+    --template-headings-font: "Montserrat", sans-serif;
+}
+
+/* hero slider */
+.extended-banner-texts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.extended-banner-link, .extended-banner-text, .extended-banner-title {
+    position: relative;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+.extended-banner-link {
+    height: unset;
+    margin-top: unset;
+    right: unset;
+    top: unset;
+    background-color: #fff;
+    width: 243px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffffff;    
+}
+
+.extended-banner-link:hover {
+  background-color: var(--color-tertiary-hover);
+}
+
+.extended-banner-title {
+font-weight: 500;
+line-height: 100%;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+margin-bottom: 1rem;
+color: #fff;
+}
+
+.extended-banner-text {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.3;
+  max-width: 700px;
+  text-wrap: balance;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+
+/* banery */
+
+@media (min-width: 992px) {
+    .next-to-carousel-banners {
+        margin-top: 3rem;
+    }
+}
+
+/* skrytí textu "vítejte" na homepage */
+.homepage-texts-wrapper {
+    display: none;
+}
