@@ -10,6 +10,9 @@
     border-radius: 0px;
 }
 
+.btn {
+    font-weight: 500;
+}
 button, input[type="submit"], a.btn {
     text-transform: none;
 }
@@ -17,7 +20,6 @@ button, input[type="submit"], a.btn {
 .btn.btn-secondary,
 a.btn.btn-secondary {
     border: 1px solid #000;
-    font-weight: 500;
 }
 
 .btn.btn-secondary:hover,
@@ -189,12 +191,6 @@ label[for="newsletterConsents31"] {
     height: 117px;
 }
 
-/* novinky */
-.homepage-blog-wrapper {
-    background-color: #000;
-    padding: 20px;
-}
-
 /* banery benefit */
 
 .container--bannersBenefit {
@@ -202,8 +198,8 @@ label[for="newsletterConsents31"] {
 }
 
 .benefitBanner {
-    margin-top: 165px;
-    margin-bottom: 165px;
+    margin-top: 150px;
+    margin-bottom: 146px;
 }
 
 .benefitBanner__item  {
@@ -211,8 +207,8 @@ label[for="newsletterConsents31"] {
     font-weight: 500;
     text-wrap: balance;
     margin-bottom: 0px;
-    padding-top: 22px;
-    padding-bottom: 22px;
+    padding-top: 28px;
+    padding-bottom: 28px;
 }
 .benefitBanner__item + .benefitBanner__item {
     border-left: 1px solid #C4C4C4;
@@ -228,16 +224,17 @@ label[for="newsletterConsents31"] {
 }
 
 /* blog */
-
+/* novinky */
 .homepage-blog-wrapper {
-    padding: 64px 0 136px 0;
+    background-color: #000;
+    padding: 64px 0 124px 0;
 }
 
 .homepage-group-title.h4 {
     font-weight: 500;
     font-size: 36px;
     color: #fff;
-    margin-bottom: 40px;
+    margin-bottom: 64px;
 }
 
 .blog-wrapper a {
@@ -297,7 +294,7 @@ label[for="newsletterConsents31"] {
 .blog-wrapper .news-item .text {
     position: absolute;
     bottom: 0;
-    padding: 20px;
+    padding: 30px 40px;
     z-index: 2;
     height: 100%;
     width: 100%;
@@ -321,7 +318,7 @@ label[for="newsletterConsents31"] {
 
 .news-wrapper-outer .btn.btn-primary {
     position: absolute;
-    bottom: -53px;
+    bottom: -48px;
     right: 0;
     padding: 15px 130px 15px 30px;
     background-color: var(--color-secondary);
@@ -512,5 +509,5 @@ a.name {
 }
 
 .show-more-container {
-    margin-bottom: 40px;
+    margin-bottom: 90px;
 }
