@@ -97,5 +97,44 @@ document.addEventListener('DOMContentLoaded', function() {
             dateNode.textContent = '20.12.2021';
             title.parentNode.insertBefore(dateNode, title);
         });
+
+        // Nahradíme obsah tlačítka "do košíku" ikonou
+        var addToCartButtons = document.querySelectorAll('.add-to-cart-button');
+        addToCartButtons.forEach(function(button) {
+            button.innerHTML = '<img src="https://706264.myshoptet.com/user/documents/upload/shopping-cart.svg" alt="Shopping Cart Icon">';
+        });
+
+        // Najdeme všechny elementy s barvou #009901 a nahradíme ji za #63DA46
+        var elementsWithColor = document.querySelectorAll('[style*="color:#009901"]');
+        elementsWithColor.forEach(function(element) {
+            element.style.color = '#63DA46';
+        });
+        // Najdeme všechny elementy s barvou #cb0000 a nahradíme ji za #F24D4D
+        var elementsWithColor = document.querySelectorAll('[style*="color:#cb0000"]');
+        elementsWithColor.forEach(function(element) {
+            element.style.color = '#F24D4D;';
+        });
+    }
+
+    var availabilityDivs = document.querySelectorAll('.availability span');
+    availabilityDivs.forEach(function(span) {
+        if (span.textContent.trim() === 'Na dotaz') {
+            span.style.color = '#979797';
+        }
+    });
+
+    // Přidáme tlačítko za .shp-tabs-wrapper.homepage-tabs-wrapper
+    var tabsWrapper = document.querySelector('.shp-tabs-wrapper.homepage-tabs-wrapper');
+    if (tabsWrapper) {
+        var wrapperDiv = document.createElement('div');
+        wrapperDiv.className = 'text-center show-more-container';
+
+        var newButton = document.createElement('a');
+        newButton.href = 'https://706264.myshoptet.com/modni-doplnky/';
+        newButton.className = 'btn btn-secondary';
+        newButton.textContent = 'Zobrazit více produktů';
+
+        wrapperDiv.appendChild(newButton);
+        tabsWrapper.parentNode.insertBefore(wrapperDiv, tabsWrapper.nextSibling);
     }
 });
