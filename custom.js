@@ -21,4 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (submitButton) {
         submitButton.textContent = 'Odeslat';
     }
+
+    var benefitsSection = document.querySelector('.container--bannersBenefit');
+    var footer = document.querySelector('#footer');
+    if (benefitsSection && footer) {
+        footer.parentNode.insertBefore(benefitsSection, footer);
+    }
 });

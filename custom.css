@@ -89,7 +89,9 @@ color: #fff;
     background-position: 31% 67%;
     background-repeat: no-repeat;
 }
-
+#footer {
+    margin-top: 0;
+}
 #footer .custom-footer-container .footer-newsletter {
     padding-top: 0;
     padding-bottom: 0;
@@ -169,4 +171,42 @@ label[for="newsletterConsents31"] {
 
 .footer-newsletter .form-control {
     height: 117px;
+}
+
+/* novinky */
+.homepage-blog-wrapper {
+    background-color: #000;
+    padding: 20px;
+}
+
+/* banery benefit */
+
+.container--bannersBenefit {
+    padding: 0;
+}
+
+.benefitBanner {
+    margin-top: 165px;
+    margin-bottom: 165px;
+}
+
+.benefitBanner__item  {
+    font-size: 18px;
+    font-weight: 500;
+    text-wrap: balance;
+    margin-bottom: 0px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+.benefitBanner__item + .benefitBanner__item {
+    border-left: 1px solid #C4C4C4;
+    padding-left: 50px;
+}
+.benefitBanner__content {
+    padding-right:0; 
+}
+.benefitBanner__picture img{
+    width: 60px;
+    height: auto;
+    object-fit: contain;
 }
