@@ -208,4 +208,51 @@ document.addEventListener('DOMContentLoaded', function() {
         signature.appendChild(textLink);
         signature.appendChild(link);
     }
+
+    // bulletky carouselu
+    var carouselInner = document.querySelector('.carousel-inner');
+    if (carouselInner) {
+        var items = carouselInner.querySelectorAll('.item');
+        var carouselIndicators = document.createElement('ol');
+        carouselIndicators.className = 'carousel-indicators';
+
+        items.forEach(function(item, index) {
+            var indicator = document.createElement('li');
+            indicator.setAttribute('data-target', '#carousel');
+            indicator.setAttribute('data-slide-to', index);
+            if (item.classList.contains('active')) {
+                indicator.className = 'active';
+            }
+
+            indicator.addEventListener('click', function() {
+                // Použijeme Shoptet implementaci Bootstrap carousel
+                $('#carousel').carousel(index);
+            });
+
+            carouselIndicators.appendChild(indicator);
+        });
+
+        var carousel = document.querySelector('#carousel');
+        carousel.appendChild(carouselIndicators);
+        
+        // Přidáme naznačení skrolování
+        var scrollIndicator = document.createElement('div');
+        scrollIndicator.className = 'scroll-indicator';
+        
+        // Vytvoříme vertikální text "Skroluj"
+        var scrollText = document.createElement('div');
+        scrollText.className = 'scroll-text';
+        scrollText.textContent = 'Skroluj';
+        
+        // Přidáme čáru pod textem
+        var scrollLine = document.createElement('div');
+        scrollLine.className = 'scroll-line';
+        
+        // Složíme prvky dohromady
+        scrollIndicator.appendChild(scrollText);
+        scrollIndicator.appendChild(scrollLine);
+        
+        // Přidáme do carouselu
+        carousel.appendChild(scrollIndicator);
+    }
 });

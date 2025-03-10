@@ -70,7 +70,7 @@ margin-bottom: 1rem;
 color: #fff;
 }
 
-.extended-banner-text {
+.carousel-inner .extended-banner-text {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.3;
@@ -81,6 +81,42 @@ color: #fff;
   color: #fff;
 }
 
+.carousel-control.left, .carousel-control.right {
+    display: none;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Naznačení skrolování */
+.scroll-indicator {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-710px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.scroll-text {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 200px;
+    background-color: #fff;
+}
 
 /* banery */
 
@@ -516,10 +552,6 @@ a.name {
 /*kategorie - čtverec */
 .banner-wrapper {
     position: relative;
-}
-span.extended-banner-link {
-    position: absolute;
-    bottom: 56px;
 }
 
 .extended-banner-text {
