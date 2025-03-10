@@ -553,9 +553,17 @@ a.name {
 .banner-wrapper {
     position: relative;
 }
+.banner-wrapper span.extended-banner-link {
+    position: absolute;
+    bottom: 50px;
+}
 
-.extended-banner-text {
+.banner-wrapper .extended-banner-text {
     line-height: 1.2;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
 }
 
 .banner-wrapper a img {
