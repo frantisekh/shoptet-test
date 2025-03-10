@@ -5,6 +5,11 @@
     --template-headings-font: "Montserrat", sans-serif;
 }
 
+/* global overides */
+.form-control, button {
+    border-radius: 0px;
+}
+
 /* hero slider */
 .extended-banner-texts {
     display: flex;
@@ -70,4 +75,98 @@ color: #fff;
 /* skrytí textu "vítejte" na homepage */
 .homepage-texts-wrapper {
     display: none;
+}
+
+/* newsletter */
+.custom-footer-container {
+    background-color: var(--color-secondary);
+    padding: 85px 20px 55px;
+    text-align: center;
+    position: relative;
+    border-top: none;
+    background-image: url(https://706264.myshoptet.com/user/documents/upload/eva_message-circle-outline.png);
+    background-size: 650px;
+    background-position: 31% 67%;
+    background-repeat: no-repeat;
+}
+
+#footer .custom-footer-container .footer-newsletter {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#footer .custom-footer-container .footer-newsletter h4 {
+    font-weight: 500;
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 63px;
+}
+
+.custom-footer-container p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.custom-footer-container fieldset {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.custom-footer-container fieldset br {
+    display: none;
+}
+
+.custom-footer-container input[type="email"] {
+    padding: 15px;
+    width: 500px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0px;
+    font-size: 18px;
+}   
+.custom-footer-container div.form-group.js-validated-element-wrapper.consents.consents-first {
+    position: absolute;
+}
+
+.custom-footer-container button[type="submit"] {
+    padding: 15px 130px 15px 30px;
+    background-color: #131313;
+    color: #fff;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    text-transform: none;
+    height: 117px;
+    background-image: url(https://706264.myshoptet.com/user/documents/upload/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: 83% center;
+    position: relative;
+    top: -10px;
+    right: unset;
+}
+
+.custom-footer-container button[type="submit"]:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#footer .custom-footer-container .footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-color: transparent;
+}
+
+
+.newsletter-header p,
+label[for="newsletterConsents31"] {
+    display: none;
+}
+
+.footer-newsletter .form-control {
+    height: 117px;
 }
