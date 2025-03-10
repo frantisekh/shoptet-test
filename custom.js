@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Zobrazíme pouze 4 produkty
-    var products = document.querySelectorAll('.products-block>div .p');
+    var products = document.querySelectorAll('.product');
     products.forEach(function(product, index) {
         if (index >= 4) {
             product.style.display = 'none';

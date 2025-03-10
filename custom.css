@@ -566,6 +566,14 @@ a.name {
 }
 
 /*navbar*/
+@media (min-width: 992px) {
+    #header .container {
+        min-height: 120px;
+    }
+    .fitted .navigation-in ul {
+        justify-content: flex-end;
+    }
+}
 
 .navigation-in ul li a b {
     font-weight: 500;
@@ -574,7 +582,9 @@ a.name {
 .navigation-in ul li a,
 .menu-helper>span {
     font-size: 14px;
+    font-weight: 500;
 }
+
 
 /*footer*/
 #footer {
