@@ -511,3 +511,24 @@ a.name {
 .show-more-container {
     margin-bottom: 90px;
 }
+
+
+/*kategorie - čtverec */
+.banner-wrapper {
+    position: relative;
+}
+span.extended-banner-link {
+    position: absolute;
+    bottom: 56px;
+}
+
+.extended-banner-text {
+    line-height: 1.2;
+}
+
+.banner-wrapper a img {
+    opacity: 0.9;
+}
+.banner-wrapper a:hover img {
+    opacity: 1;
+}
