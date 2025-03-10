@@ -1,0 +1,9 @@
+toto je projekt pro nastylování eshopu na platformě shoptet.
+
+web běží na: https://706264.myshoptet.com/
+uložil jsem ho lokálně do složky shoptet. Nikdy v ní neměň html soubory! Je to jen snapshot produkce, kde nemáme možnost změnit šablony.
+
+ve složce design jsou návrhy - požadovaný vzhled.
+
+jsou tu externí soubory: custom.css a custom.js, které používáme pro úpravy vzhledu - pro přestylování (javasctript potřebujeme pro manipulaci s DOMem pro úpravy nad rámec toho,c o dokážeme jne pomocí css).
+
