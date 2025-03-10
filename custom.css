@@ -10,6 +10,10 @@
     border-radius: 0px;
 }
 
+button, input[type="submit"], a.btn {
+    text-transform: none;
+}
+
 /* hero slider */
 .extended-banner-texts {
     display: flex;
@@ -209,4 +213,140 @@ label[for="newsletterConsents31"] {
     width: 60px;
     height: auto;
     object-fit: contain;
+}
+
+/* blog */
+
+.homepage-blog-wrapper {
+    padding: 64px 0 136px 0;
+}
+
+.homepage-group-title.h4 {
+    font-weight: 500;
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.blog-wrapper a {
+    color: #fff;
+}
+.news-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container.news-wrapper-outer {
+    padding: 0;
+}
+.news-wrapper-outer {
+    position: relative;
+}
+
+.blog-wrapper .news-item {
+    padding: 0;
+    position: relative;
+}
+.blog-wrapper .news-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(63.9deg, #2E2E2E 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0.85;
+    z-index: 1;
+    mix-blend-mode: multiply;
+}
+.blog-wrapper .news-item:hover:before {
+    background: #ECB235;
+    mix-blend-mode: normal;
+}
+
+
+.blog-wrapper .news-item .image {
+    margin-right: 0;
+}
+
+.blog-wrapper .news-item:hover img{
+    filter: saturate(0);   
+}
+
+.blog-wrapper .news-item .image  img{
+    object-fit: cover;
+    aspect-ratio: 1.31147540984;
+}
+
+.blog-wrapper .news-item:last-child img {
+    aspect-ratio: 2.62295081967;
+}
+
+.blog-wrapper .news-item .text {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+@media (min-width: 1200px) {
+    .blog-wrapper .news-item:not(:last-child) {
+        flex-basis: 33.333333%;
+        width: 33.333333%;
+        aspect-ratio: 1.31147540984;
+
+    }
+    .blog-wrapper .news-item:last-child {
+        flex-basis: 66.666666%;
+        width: 66.666666%;
+        aspect-ratio: 2.62295081967;
+    }
+}
+
+
+.news-wrapper-outer .btn.btn-primary {
+    position: absolute;
+    bottom: -53px;
+    right: 0;
+    padding: 15px 130px 15px 30px;
+    background-color: var(--color-secondary);
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: none;
+    height: 117px;
+    background-image: url(https://706264.myshoptet.com/user/documents/upload/arrow-right-black.svg);
+    background-repeat: no-repeat;
+    background-position: 83% center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.news-wrapper-outer .btn.btn-primary:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+
+.blog-wrapper .news-item .description {
+    display: none;
+}
+
+.author-info {
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.author-info img {
+    width: 20px;
+    height: 20px;
+}
+
+.blog-wrapper .news-item .title {
+    margin-top: 5px;
 }
